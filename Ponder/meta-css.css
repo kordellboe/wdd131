@@ -9,11 +9,13 @@ body {
     padding: 40px;
 }
 img {
-    width: 70%;
-   text-align: center;
+    
+    display: block;
+    width: 50%;
+   margin: 0 auto;
 }
 h1 {
-    letter-spacing: 1000px;
+    letter-spacing: 10px;
 }
 
 h1, h2, p{
@@ -29,7 +31,7 @@ h1, h2, p{
 
 hr { 
     height: 3px;
-    background-color: blue;
+    background-color: rgb(32, 32, 250);
     width: 80%;
     margin: 30px auto;
     ;
