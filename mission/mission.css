@@ -1,0 +1,33 @@
+body {
+    background-color: #ffffff;
+    Font-size: 20px;
+}
+#content {
+    max-width:  60%;
+    font-style: times new roman georgia;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 40px;
+}
+#topics {
+    font-style: times new roman;
+    text-align: left;
+    width: 55%;
+    margin: 0 auto;
+}
+
+#how {
+    font-style: times new roman;
+    text-align: left;
+    width: 55%;
+    margin: 0 auto;
+}
+img {    
+    display: block;
+    width: 30%;
+   margin: 0 auto;
+}
+h1 {
+    letter-spacing: 10px;
+}                                                                       
