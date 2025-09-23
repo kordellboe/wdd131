@@ -1,20 +1,33 @@
 body {
     background-color: #ffffff;
     Font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
+
+h2 {
+    color: royalblue;
+    font-size: .8em;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
 #content {
-    max-width:  60%;
-    font-style: times new roman georgia;
+    max-width:  600px;
+    line-height: 1.5;
+    font-style: times new roman;
     text-align: center;
     margin: 0 auto;
     border: 2px solid rgb(0, 0, 0);
-    padding: 40px;
+    padding: 50px 150px;
 }
 #topics {
     font-style: times new roman;
     text-align: left;
-    width: 55%;
     margin: 0 auto;
+}
+
+#italics {
+    font-style: italic;
 }
 
 #how {
@@ -26,8 +39,8 @@ body {
 img {    
     display: block;
     width: 30%;
-   margin: 0 auto;
+   margin: 50px auto ;
 }
 h1 {
-    letter-spacing: 10px;
+    letter-spacing: 3px;
 }                                                                       

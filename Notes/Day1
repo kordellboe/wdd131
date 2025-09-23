@@ -1,0 +1,21 @@
+Content Properties 
+    - InnerHTML
+    - InnerText
+    - TextContent
+    - .Value
+
+Style Properties
+    - .Style 
+        - element.style.property = "blue"
+
+    - .ClassName
+        - element.className = "newClass"
+    - .add(). remove(). .toggle()
+        - element.classList.add("newClass")
+        - element.classList.remove("newClass")
+        - element.classList.toggle("newClass")
+
+Create and Remove 
+    - .create.Element()
+    - .appendChild()
+
