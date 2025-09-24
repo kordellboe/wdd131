@@ -36,3 +36,20 @@ hr {
     margin: 30px auto;
     ;
 }
+
+.topic {
+    border: 1px solid rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.05);
+    transition: .2s all;
+    border-radius: 8px;
+}
+.highlight {
+    
+    border:1px solid red;
+    background-color: rgba(255,0, 0,.1);
+    padding: 24px;
+    
+}
+.blue {
+    background-color: rgba(37, 37, 187, 0.1);
+}

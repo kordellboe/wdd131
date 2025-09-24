@@ -1,0 +1,38 @@
+/* portfolio.css - Beginner CSS for a student cybersecurity portfolio */
+
+/* Connect this CSS file to your portfolio.html using:
+    <link rel="stylesheet" href="portfolio.css">
+*/
+
+/* Basic page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181818;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #23272f;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #1a1d23;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #00ffe7;
+  text-

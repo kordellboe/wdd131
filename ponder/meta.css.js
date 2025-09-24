@@ -27,10 +27,25 @@ console.log(course); //works fine, course is global
                     
 
 let selectElem = document.getElementById('webdevlist');
+
+let topics = document.querySelectorAll('.topic');
+
+
 selectElem.addEventListener('change', function(){
+
+    topics.forEach(topic => {
+        topic.classList.remove("highlight");
+    })
+    
     let codeValue = selectElem.value;
     console.log(codeValue);
-    document.getElementById(codeValue).style.color = 'red';
+    document.getElementById(codeValue).classList.add("highlight");
+
+    const image = document.querySelector('img');
+    image.setAttribute('src', 'images/597-5977109_html5-css3-javascript-logos-html-css-icon-png.png');
+    image.setAttribute('alt', 'HTML, CSS and JavaScript logos');
+    document.body.classname = 'blue';
+    document.body.style.backgroundColor = 'aliceblue';
 
 })
                 
