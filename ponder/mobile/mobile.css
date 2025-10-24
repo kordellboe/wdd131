@@ -36,7 +36,6 @@ nav a {
 .change .bar1 {
     transform: translate(0, 7.5px) rotate(-45deg);
 }
-
 .change .bar2 {
     opacity: 0;
 }
