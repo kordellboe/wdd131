@@ -102,7 +102,9 @@ students.forEach(function(item){
     name.className = 'format'; 
 
     let html = `
-        <span>${item.first} ${item.last}</span>`;
+        <span>${item.first} ${item.last}</span>
+        <hr>`;
+
     name.innerHTML = html;
     container.appendChild(name);
 })
