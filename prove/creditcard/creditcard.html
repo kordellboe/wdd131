@@ -1,61 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Credit Card Checkout</title>
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">💳</text></svg>'>
-  <link rel="stylesheet" href="creditcard.css" />
-  <script defer src="creditcard.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="creditcard.css">
+    <script defer src="creditcard.js"></script>
 </head>
 <body>
-  <main class="wrap">
-    <form id="checkoutForm" novalidate>
-      <h1 class="sr">Checkout</h1>
-
-      <div class="field">
-        <label for="paymentMethod">Payment Method</label>
-        <select id="paymentMethod" name="paymentMethod" aria-controls="creditCardNumberContainer paypalUsernameContainer" aria-expanded="false">
-          <option value="">Choose…</option>
-          <option value="creditCard">Credit Card</option>
-          <option value="paypal">PayPal</option>
-        </select>
-      </div>
-
-      <section id="creditCardNumberContainer" class="panel hide">
-        <div class="card card--front" aria-label="Front of card">
-          <div class="total">TOTAL: $199 <span class="mini"></span></div>
-
-          <label class="lbl" for="creditCardNumber">CARD NUMBER</label>
-          <input id="creditCardNumber" name="creditCardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9101 1020" />
-
-          <label class="lbl" for="cardHolder">CARD HOLDER</label>
-          <input id="cardHolder" name="cardHolder" autocomplete="cc-name" placeholder="John Doe" />
-
-          <div id="cardExpiration" class="exp">
-            <label class="lbl" id="expirationDate" for="expirationDate">EXPIRATION</label>
-            <input type="text" id="month" name="expMonth" placeholder="MM" aria-labelledby="expirationDate" inputmode="numeric" pattern="^(0[1-9]|1[0-2])$" />
-            <input type="text" id="year" name="expYear" placeholder="YY" aria-labelledby="expirationDate" inputmode="numeric" pattern="^[0-9]{2}$" />
-          </div>
+    <form>  
+        <div id = "frontcard">
+            <div id="total">$199.99</div>
+            <div id="icon">💳</div> 
+            <div id="cardnumber"> 
+                <label for="cardnumber">CARD NUMBER</label>
+                <input id="cardnumber" name="cardnumber" type="text" pattern="(\d{4} \d{4} \d{4} \d{4})" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div id="cardholder"> 
+                <label for="cardholder">CARD HOLDER</label>
+                <input id="cardholder" name="cardholder" type="text" placeholder="John Doe" required>
+            </div>
+            <div id="expdate"> 
+                <label for="expdate">EXPIRATION</label>
+                <input id="month" name="expdate" type="text" placeholder="MM" required>
+                <input id="year" name="expdate" type="text" placeholder="YY" required>
+            </div>
         </div>
-
-        <div class="card card--back" aria-label="Back of card">
-          <div class="mag"></div>
-          <div class="cvc">
-            <label class="lbl" for="cvc">CVC/CVV</label>
-            <input id="cvc" name="cvc" placeholder="xxx" inputmode="numeric" pattern="^[0-9]{3,4}$" />
-          </div>
+        
+        <div id="backcard">
+            <div id="magneticstrip"></div>
+            <div id="cvvbox">
+                <label for="cvv">CVV</label>
+                <input id="cvv" name="cvv" type="text" pattern="\d{3}" placeholder="xxx" required>
+            </div>
         </div>
-      </section>
-
-      <section id="paypalUsernameContainer" class="panel hide">
-        <label class="lbl" for="paypalUsername">PayPal Username (email)</label>
-        <input id="paypalUsername" name="paypalUsername" type="email" placeholder="name@example.com" />
-      </section>
-
-      <p class="errors" aria-live="polite"></p>
-      <button type="submit" class="submit">Submit</button>
+        <button type="submit">Submit Payment</button>
     </form>
-  </main>
 </body>
 </html>

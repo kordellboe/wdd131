@@ -1,76 +1,108 @@
-:root{
-  --bg:#f5f6f8;--surface:#ffffff;--card:#e5e7eb;--card-light:#f3f4f6;
-  --ink:#1f2937;--muted:#4b5563;--line:#d1d5db;--ring:#2563eb;
-  --shadow:0 10px 28px rgba(0,0,0,.08);--radius-card:18px;--radius-ui:10px;
+body{
+    margin: 10px;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial}
-.wrap{max-width:900px;margin:40px auto;padding:0 16px}
 
-#checkoutForm{
-  display:grid;gap:18px;grid-template-columns:1fr 260px;grid-template-rows:auto auto auto;align-items:start;
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-card);padding:24px;box-shadow:var(--shadow)
+form {
+    display: grid;
+    grid-template-columns: 100px 250px 100px;
+    grid-template-rows: 30px 200px 30px 30px;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 0;
+    max-width: 450px;
 }
-.field{grid-column:1/-1;display:grid;gap:8px}
-label{font-weight:700;color:var(--muted);font-size:.95rem}
-input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:var(--radius-ui);background:#fff;color:var(--ink);font-size:16px}
-input:focus,select:focus{outline:2px solid var(--ring);border-color:var(--ring)}
-.panel{grid-column:1/2;display:grid;gap:16px}
-.hide{display:none!important}
-.errors{grid-column:1/2;min-height:1.2em;color:#b00020;font-weight:700;white-space:pre-line}
-.submit{grid-column:2;align-self:end;justify-self:end;padding:12px 22px;border:1px solid var(--line);background:#fff;border-radius:var(--radius-ui);font-weight:800;cursor:pointer}
-.submit:focus{outline:2px solid var(--ring);border-color:var(--ring)}
 
-.card{
-  width:100%;max-width:680px;background:var(--card);color:var(--ink);
-  border-radius:var(--radius-card);box-shadow:0 8px 24px rgba(0,0,0,.08);padding:24px;display:grid;gap:14px;position:relative
+input {
+ height: 20px;
 }
-.card--front{
-  grid-template-columns:14px 1fr 110px;
-  grid-template-areas:
-    "pad total chip"
-    "pad lbl1  lbl1"
-    "pad num   num"
-    "pad lbl2  lbl2"
-    "pad name  name"
-    "pad exp   exp"
+
+#frontcard, #backcard {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: lightgray;
+    border-radius: 10px;
+    /* height: 225px; */
+    box-shadow: 3px 3px 5px rgb(61, 61, 61);   
 }
-.total{grid-area:total;font-weight:800;font-size:18px;letter-spacing:.04em}
-.mini{grid-area:chip;justify-self:end;align-self:center;width:46px;height:34px;border-radius:6px;background:var(--card-light);box-shadow:inset 0 0 0 2px rgba(0,0,0,.05)}
-.lbl{font-weight:800;font-size:.85rem;letter-spacing:.05em;color:var(--muted)}
-label[for="creditCardNumber"]{grid-area:lbl1}
-#creditCardNumber{grid-area:num}
-label[for="cardHolder"]{grid-area:lbl2}
-#cardHolder{grid-area:name}
-.exp{grid-area:exp;display:grid;grid-template-columns:1fr 90px 90px;gap:10px;align-items:end}
-.exp .lbl{grid-column:1/-1}
-#month,#year,#creditCardNumber,#cardHolder,#cvc{background:#fff;border:1px solid var(--line);color:var(--ink)}
 
-.card--back{
-  margin-top:16px;grid-template-columns:1fr;grid-template-areas:"stripe" "cvcrow";background:var(--card-light)
+#frontcard {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    padding: 20px;
+    z-index: 2;
+    gap: 10px;
 }
-.mag{grid-area:stripe;height:46px;background:#c3c4c7;border-radius:8px;margin-bottom:14px}
-.cvc{grid-area:cvcrow;justify-self:end;width:240px;display:grid;gap:8px}
-#cvc{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%}
-
-#paypalUsernameContainer{border:1px dashed var(--line);border-radius:12px;background:#fff;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
-
-.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-
-@media(max-width:760px){
-  #checkoutForm{grid-template-columns:1fr;grid-template-rows:auto auto auto auto}
-  .panel{grid-column:1}
-  .submit{grid-column:1;justify-self:end}
-  .card--front{
-    grid-template-columns:1fr 100px;
-    grid-template-areas:
-      "total chip"
-      "lbl1 lbl1"
-      "num num"
-      "lbl2 lbl2"
-      "name name"
-      "exp exp"
-  }
-  .cvc{width:100%}
+#backcard {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    padding: 15px, 0;
+    margin: 0 15px;
+    z-index: 1;
 }
+
+button {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  justify-self: center;
+  align-self: center;
+
+  padding: 10px 20px;     
+  background-color: rgb(55, 130, 42);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#total {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 20px;
+}
+
+#icon {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: right;
+    font-size: 30px;
+}
+#cardnumber {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+#cardholder {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}   
+
+#expdate {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#expdate input {
+    width: 35%;
+   display: inline-block;
+}
+
+#magneticstrip {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: black;
+    height: 40px;
+    margin-top: 20px;
+}
+#cvvbox {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 50px 20px 0 0;
+
+
+}
+
+#cvvbox input {
+    width: 55px;
+}
+
