@@ -21,13 +21,11 @@ img {
   font-size: 2.5rem;
 }
 
-/* logo image size */
 .logo img {
   width: 60px;
   height: auto;
 }
 
-/* search icon size */
 .search-area img {
   width: 24px;
   height: auto;
@@ -89,12 +87,15 @@ footer {
 }
 
 .social {
-    width: 24px;
-    height: 28px;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: .75rem;
+}
+
+.social img {
+  width: 28px;
+  height: 28px;
 }
 
 @media screen and (min-width: 700px) {
