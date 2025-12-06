@@ -105,11 +105,11 @@ footer {
 
   .description {
     display: block;
-    max-width: 45ch;
   }
 
   .recipe-info {
     flex: 1;
+    max-width: 45ch;
   }
 
   .recipe-card img {
