@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecipeBook</title>
-  <link rel="stylesheet" href="recipe.css">
+  <link rel="stylesheet" href="Recipe.css">
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+   <script src="Recipe.js" defer></script>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="RecipeBook">
@@ -20,6 +21,8 @@
 
   <link rel="icon" href="../favicon.ico">
   <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+
+ 
 </head>
 
 <body>
@@ -32,32 +35,12 @@
   </header>
 
   <section class="search-area">
-    <input type="text" placeholder="Find a recipe">
-    <button><img src="../images/search.svg" alt="search"></button>
+    <input id="searchInput" type="text" placeholder="Find a recipe">
+    <button id="searchButton"><img src="../images/search.svg" alt="search"></button>
   </section>
 
   <main>
-    <section class="recipe-card">
-      <img src="../images/apple-crisp.jpg" alt="Apple crisp dessert">
-
-      <div class="recipe-info">
-        <p class="tag">dessert</p>
-
-        <h2>Apple Crisp</h2>
-
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">☆</span>
-        </span>
-
-        <p class="description">
-          This apple crisp recipe is a simple and warm fall dessert served best with vanilla ice cream.
-        </p>
-      </div>
-    </section>
+    <section id="recipeContainer"></section>
   </main>
 
   <footer>
